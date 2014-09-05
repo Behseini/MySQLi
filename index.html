@@ -146,11 +146,15 @@ box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.75)!important;}
   $db->query($sql); </pre>   
     
     <br />
-   <p> As you can see from the above code we are calling and executing the query() method but we need to sote the result of the value inside an array type so we upgrade the code to :
+   <p> As you can see from the above code we are calling and executing the query() method but we need to sote the result of the value inside a varaiable to be manipulate ever time we need in the code. so we upgrade the code to :
       <pre class="php">
   $result = $db->query($sql); </pre>  
-      <p>  
-      
+      <p> the $result infact is a PHP array - PHP Hint: we do not need to explictly declare any variable type including arrays in PHP so an exmaple like this is correct
+           <pre class="php">
+  $arr = oldArr('Item 1','Item 2','Item 3'); </pre>  
+        
+      </p> 
+    <p>  
       
  1- IF QUERY IS SUCCESS
 if($result = $db->query($sql)){
