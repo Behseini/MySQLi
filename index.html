@@ -150,17 +150,20 @@ box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.75)!important;}
       <pre class="php">
   $result = $db->query($sql); </pre>  
       <p> the $result infact is a PHP array - PHP Hint: we do not need to explictly declare any variable type including arrays in PHP so an exmaple like this is correct
+           </p>     
            <pre class="php">
  &lt;?php
    $items=array("Volvo","BMW","Toyota");
    $arr = $items;
-   echo $arr[2].'&lt;br /&lt;';
+   echo $arr[2].'&lt;br /&gt;';
    foreach($arr as $output){
-     echo $output.'&lt;br /&lt;';
+     echo $output.'&lt;br /&gt;';
    }
-?&lt; </pre>  
+?&gt; </pre>  
         
-      </p> 
+ 
+      
+      <a href="http://ideone.com/icQKkJ" >Try It</a>
     <p>  
       
  1- IF QUERY IS SUCCESS
