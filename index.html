@@ -131,43 +131,47 @@ border-color: #d6e9c6;
    $db = new mysqli("localhost", "the_user", "the_password", "the_database"); </pre>        
         
         
-        
-        Then Pass data into data
+      <p>  
+ 1- IF QUERY IS SUCCESS
+if($result = $db->query($sql)){
+
+
+}
+
+2- IF WE ARE GETTING ANY RESULT
+
+ if($result->num_rows){
  
+ }
+ 
+ 3- Put two if together
+ 
+ if($result = $db->query($sql)){
+  if($result->num_rows){
+ 
+ }
 
-B: Initialize data inside the ajax call on data property
+}
 
-          .js:
-            <pre class="js">
-         var req = $.ajax({
-                            type: "POST",            
-                            url: "filemaker.php",
-                            dataType: "html",          
-                            data: { dir: "John", word: "Boston"}          
-          });
-          </pre>
-          
-          .php:
-           <pre class="php">
-              $dir  = trim($_POST['dir']); 
-              $word = trim($_POST['word']);
-              
-</pre>
-be aware that the data array also can be very straight like 
 
-                             data: { dir: $('#files :selected').text(), word: $("#fword").val()} 
-      
-    <pre class="js">
-&lt;script>
-$.ajax({
-  url: "test.html",
-  context: document.body
-}).done(function() {
-  $( this ).addClass( "done" );
-});
-&lt;/script&gt;
-</pre>
-      
+There are situations that we do not need to get any result back from the database like when we
+want to create a table. In this case we may only need a success message which can be print out
+by echo or 
+
+$sql = "CREATE TEMPORARY TABLE city";
+
+if ($mysqli->query($sql) === TRUE) {
+    
+}
+
+SQL hint
+Use LIKE to create an empty table based on the definition of another table, including any column attributes and indexes defined in the original table:
+
+CREATE TABLE new_tbl LIKE orig_tbl;
+The copy is created using the same version of the table storage format as the original table. The SELECT privilege is required on the original table.
+
+LIKE works only for base tables, not for views.
+      </p>
     </div><!-- End of Container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
