@@ -151,7 +151,14 @@ box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.75)!important;}
   $result = $db->query($sql); </pre>  
       <p> the $result infact is a PHP array - PHP Hint: we do not need to explictly declare any variable type including arrays in PHP so an exmaple like this is correct
            <pre class="php">
-  $arr = oldArr('Item 1','Item 2','Item 3'); </pre>  
+ <?php
+   $items=array("Volvo","BMW","Toyota");
+   $arr = $items;
+   echo $arr[2].'<br />';
+   foreach($arr as $output){
+     echo $output.'<br />';
+   }
+?> </pre>  
         
       </p> 
     <p>  
