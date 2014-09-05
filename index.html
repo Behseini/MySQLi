@@ -144,7 +144,14 @@ box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.75)!important;}
   <p> inorder to do query MySQLi has abuilt in query method which is called <h4><span class="label label-default">query()</span></h4> which has a parameter string SQL statement.
    <pre class="php">
   $db->query($sql); </pre>   
+    
+    <br />
+   <p> As you can see from the above code we are calling and executing the query() method but we need to sote the result of the value inside an array type so we upgrade the code to :
+      <pre class="php">
+  $result = $db->query($sql); </pre>  
       <p>  
+      
+      
  1- IF QUERY IS SUCCESS
 if($result = $db->query($sql)){
 
