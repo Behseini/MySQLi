@@ -118,31 +118,13 @@ border-color: #d6e9c6;
   <h1>PHP MySQLi <small>A Non-Programmer Approach!</small></h1>
 </div>
 
-<div class="bs-callout bs-callout-danger">
+<div class="bs-callout bs-callout-success">
     <h4>I am not a Programmer</h4>
     <p>Well, I know how to programming a little bit but I am not as good as you.</p>
   </div>
       There Several Ways
 
-1- Serialize Form
 
-2- Single Item Post
-
-    <pre class="js">
-         var username = $('#username').val(); 
-         var data = 'uname=' + username; 
-         
-         var req = $.ajax({
-                            type: "POST",            
-                            url: "filemaker.php",
-                            dataType: "html",          
-                            data: data           
-          });
-    </pre>      
-          .php:
-          <pre class="php">
-          $userName = $_POST['uname']); 
-</pre> 
 3- Multipile Item Post
 
 A: Initialize data out of the ajax method:
